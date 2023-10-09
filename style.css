@@ -1,0 +1,42 @@
+html body{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    height: 100%;
+}
+#ogcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+    height: 100vh;
+}
+#container{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 480px;
+    height: 480px;
+
+}
+#uicontainer{
+    align-self: center;
+}
+.grid{
+    margin: 0;
+    padding: 0;
+    
+}
+.gridbox{
+    border: 1px solid black;
+}
+
+.hover{
+    background-color: red;
+}
+
