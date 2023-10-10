@@ -3,13 +3,24 @@ const uicontainer = document.querySelector('#uicontainer');
 const ogcontainer =  document.querySelector('#ogcontainer');
 const inp = document.createElement('input');
 const btn = document.createElement('button');
+const clear = document.createElement('button');
+const grid = document.createElement('button');
+grid.textContent = 'grid';
+clear.textContent = 'clear';
 btn.textContent = 'select';
+inp.placeholder = 'enter';
 uicontainer.appendChild(inp);
 uicontainer.appendChild(btn);
-inp.placeholder = 'enter';
+uicontainer.appendChild(clear);
+uicontainer.appendChild(grid);
+const colors = ['red','yellow','black','blue','purple','green'];
+
+
+
 btn.addEventListener('click',() =>{
     const w = inp.value;
     createGrid(w);
+    inp.value = '';
 })
 function createGrid(numberofsquares){
     const w = inp.value;
@@ -23,15 +34,22 @@ function createGrid(numberofsquares){
         for(let j = 0; j< numberofsquares;j++){
             const box = document.createElement('div');
             box.classList.add('box');
+            box.classList.add('grid');
             columnDiv.appendChild(box);
             box.style.width = `${480/w}px`
             box.style.height = `${480/w}px`
             box.addEventListener('mouseenter',() =>{
-                box.classList.add('hover');   
+                box.classList.add('hover'); 
+                const randomElement = colors[Math.floor(Math.random() * colors.length)];
+                box.style.backgroundColor = randomElement;  
             })
-            //box.addEventListener('mouseleave',() =>{
-                //box.classList.remove('hover');
-            //})
+            clear.addEventListener('click',()=>{
+                box.classList.remove('hover');
+                box.style.backgroundColor = 'white';
+            })
+            grid.addEventListener('click',()=>{
+                box.classList.remove('grid');
+            })
         }
     }
     }

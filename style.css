@@ -1,13 +1,14 @@
 html body{
     padding: 0px;
     margin: 0px;
+
 }
 body{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 50px;
-    height: 100%;
+    
 }
 #ogcontainer{
     display: flex;
@@ -26,15 +27,24 @@ body{
 }
 #uicontainer{
     align-self: center;
+    display: flex;
+    gap: 5px;
 }
 .box{
     margin: 0;
     padding: 0;
-    border: 1px solid black;
+    
 }
 
 
 .hover{
     background-color: red;
 }
-
+.grid{
+    border: 1px solid black;
+}
+button{
+    border-radius: 5px;
+    color: black;
+    background-color: antiquewhite;
+}
