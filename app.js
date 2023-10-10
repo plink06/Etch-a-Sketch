@@ -18,28 +18,28 @@ function createGrid(numberofsquares){
         container.textContent = 'ERROR! too big!'
     }else{
     for (let i = 0; i< numberofsquares;i++){
-        const rowDiv = document.createElement('div');
-        rowDiv.classList.add('grid');
-        rowDiv.style.width = `${480/w}px`
-        rowDiv.style.height = `${480/w}px`
-        container.appendChild(rowDiv);
-        
+        const columnDiv = document.createElement('div');
+        container.appendChild(columnDiv);
         for(let j = 0; j< numberofsquares;j++){
-            const gridBox = document.createElement('div');
-            gridBox.classList.add('grid');
-            gridBox.classList.add('gridbox')
-            rowDiv.appendChild(gridBox);
-            gridBox.style.width = `${480/w}px`
-            gridBox.style.height = `${480/w}px`
+            const box = document.createElement('div');
+            box.classList.add('box');
+            columnDiv.appendChild(box);
+            box.style.width = `${480/w}px`
+            box.style.height = `${480/w}px`
+            box.addEventListener('mouseenter',() =>{
+                box.classList.add('hover');   
+            })
+            //box.addEventListener('mouseleave',() =>{
+                //box.classList.remove('hover');
+            //})
         }
     }
     }
-    
+      
 }
-container.addEventListener('mouseenter',(e) =>{
-    e.currentTarget.style.backgroundColor = 'red';
-    console.log('mouse has enterd');
+container.addEventListener('mouseenter',() =>{
 })
+
 
 
 

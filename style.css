@@ -27,14 +27,12 @@ body{
 #uicontainer{
     align-self: center;
 }
-.grid{
+.box{
     margin: 0;
     padding: 0;
-    
-}
-.gridbox{
     border: 1px solid black;
 }
+
 
 .hover{
     background-color: red;
