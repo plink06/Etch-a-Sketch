@@ -14,13 +14,14 @@ uicontainer.appendChild(btn);
 uicontainer.appendChild(clear);
 uicontainer.appendChild(grid);
 const colors = ['red','yellow','black','blue','purple','green'];
-
+container.classList.add('bordercontainer');
 
 
 btn.addEventListener('click',() =>{
     const w = inp.value;
     createGrid(w);
     inp.value = '';
+    container.classList.remove('bordercontainer');
 })
 function createGrid(numberofsquares){
     const w = inp.value;
@@ -44,7 +45,6 @@ function createGrid(numberofsquares){
                 box.style.backgroundColor = randomElement;  
             })
             clear.addEventListener('click',()=>{
-                box.classList.remove('hover');
                 box.style.backgroundColor = 'white';
             })
             grid.addEventListener('click',()=>{
@@ -55,8 +55,7 @@ function createGrid(numberofsquares){
     }
       
 }
-container.addEventListener('mouseenter',() =>{
-})
+
 
 
 

@@ -23,7 +23,10 @@ body{
     padding: 0;
     width: 480px;
     height: 480px;
-
+    
+}
+.bordercontainer{
+    border: 1px solid black;
 }
 #uicontainer{
     align-self: center;
